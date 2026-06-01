@@ -8,12 +8,12 @@ function createArrayFromPhrase(phrase) {
 }
 
 const InfoSection = (props) => (
-  <Grid className={`${props.className} info-section`}>
+  <>
     <Column md={8} lg={16} xlg={3}>
       <h3 className="info-section__heading">{props.heading}</h3>
     </Column>
     {props.children}
-  </Grid>
+  </>
 );
 
 const InfoCard = (props) => {
@@ -22,7 +22,7 @@ const InfoCard = (props) => {
     <Column sm={4} md={8} lg={5} xlg={4} className="info-card">
       <div>
         <h4 className="info-card__heading">
-          {'${splitHeading[0]} '}
+          {`${splitHeading[0]} `}
           <strong>{splitHeading[1]}</strong>
         </h4>
         <p className="info-card__body">{props.body}</p>
